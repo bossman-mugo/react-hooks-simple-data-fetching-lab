@@ -7,7 +7,7 @@ function App(){
     useEffect(() => {
         fetch('https://dog.ceo/api/breeds/image/random')
         .then(r => r.json())
-        .then(data => setDogImage(data.image))
+        .then(data => setDogImage(data.message))
         .catch(error => console.error(error))
     }, [])
 
