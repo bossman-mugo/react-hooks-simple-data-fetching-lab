@@ -9,9 +9,21 @@ function App(){
         .then(r => r.json())
         .then(data => setDogImage(data.image))
         .catch(error => console.error(error))
-    }, [];
+    }, [])
 
+    return (
+        <div>
+        {dogImage ? <img src={dogImage} alt="A Random Dog"/>
+        :
+        <p>Loading...</p>
+        };
 
-
+        </div>
     )
+
+
+
+
 }
+
+export default App;
